@@ -1,0 +1,15 @@
+<div class="mt-4 rounded overflow-y-auto w-3/4 shadow-lg border border-gray-400">
+{{#each comments as |gallery|}}
+<div id="card" class="mt-4 rounded overflow-y-auto  ">
+  <div class="px-6 py-4 ">
+    <div class="grid grid-cols-2 font-bold text-xl mb-2">
+      <div> {{gallery.blog_title}} </div>
+      <div class="text-gray-700 text-base text-right font-thin">Posted by: {{gallery.author}} on {{gallery.createdAt}}</div>
+      </div>
+    <p class="text-gray-700 text-base">
+      {{gallery.comment_text}}
+    </p>
+  </div>
+</div>
+{{/each}}
+</div>

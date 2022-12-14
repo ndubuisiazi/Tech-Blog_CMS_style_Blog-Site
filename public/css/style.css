@@ -1,0 +1,37 @@
+
+#header{
+  background-color:#90A4AE;
+  
+  width: 100%;
+}
+
+#frame{
+  grid-template-rows: 5% 5% 90%;
+  
+  display: grid;
+}
+
+#bottomHeader{
+  background-color:#90A4AE;
+  
+  width: 100%;
+  
+}
+
+#tlable{
+  width: 100%;
+}
+#textContainer{
+  width: 100%;
+}
+#containerBottom{
+  grid-template-rows: 50% 50%;
+}
+
+#postContainer{
+  grid-template-rows:10% 60% 30% ;
+}
+
+#commentContainer{
+  grid-template-rows:70% 30%
+}

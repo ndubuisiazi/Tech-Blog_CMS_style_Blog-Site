@@ -1,0 +1,49 @@
+<div class="mt-4 rounded overflow-y-auto w-3/4 shadow-lg border border-gray-400">
+<div id="card" class="mt-4 rounded overflow-y-auto  ">
+  <div class="px-6 py-4 ">
+    <div class="grid grid-cols-2 font-bold text-xl mb-2">
+      <div id="blogid" class={{id}}> {{blog_title}} </div>
+      <div class="text-gray-700 text-base text-right font-thin">Posted by: {{author}} on {{format_date dateposted}}</div>
+      </div>
+    <p class="text-gray-700 text-base">
+      {{blog_text}}
+ 
+    </p>
+  </div>
+</div>
+
+{{#each comments as |gallery|}}
+      <li class="list-none px-6 py-4">
+        <div class="text-gray-700 text-base text-left font-thin"> {{gallery.author}}</div>
+      <div> {{gallery.comment_text}} </div>
+      </li>
+{{/each}}
+</div>
+
+
+
+{{#if loggedIn}}
+            <div class="mt-4 rounded overflow-hidden h-3/4 w-3/4 ">
+                <div id="commentContainer" class="border border-gray-400 grid grid-rows-2 gap-y-4 bg-white px-6 py-8 rounded shadow-md text-black w-full">
+                   
+                    <input
+                        type="text"
+                        class="mb-4 h-full form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                        id="commentText"
+                        placeholder="Comment"
+                        />
+                      <button
+                        type="button"
+                        onclick="newComentHandler()"
+                        id="submitComment"
+                        class="w-1/5 inline-block px-7 py-3 bg-blue-600 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+                        New Post +
+                        </button>
+            </div>
+        </div>
+
+
+            {{else}}
+            <div class="mt-4 rounded overflow-hidden w-3/4 "></div>
+            {{/if}}
+          <script src="/js/login.js"></script>
